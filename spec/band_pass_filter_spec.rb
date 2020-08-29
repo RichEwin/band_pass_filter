@@ -16,4 +16,8 @@ describe ('#filter') do
     it 'Ammends multiple frequencies in the soundwave' do 
         expect(filter([100, 300], 50, 200)).to eq [100, 200]
     end 
+
+    it 'Raises an error if soundwave file is corrupt' do 
+        expect { filter(["Test"], 50, 2000) }.to raise_error 'FILE IS CORRUPT'
+    end 
 end 
