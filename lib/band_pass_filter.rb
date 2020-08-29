@@ -1,3 +1,9 @@
 def filter(soundwave, low_freq, high_freq)
-    soundwave
+    filter_input = []
+
+    if soundwave.first < low_freq
+        filter_input << low_freq
+    else 
+        filter_input << soundwave.first
+    end 
 end 
