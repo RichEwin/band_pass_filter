@@ -12,4 +12,8 @@ describe ('#filter') do
      it 'Ammends the higher frequency, if soundwave is above higher threshold' do 
         expect(filter([3000], 50, 2000)).to eq [2000]
     end 
+
+    it 'Ammends multiple frequencies in the soundwave' do 
+        expect(filter([100, 300], 50, 200)).to eq [100, 200]
+    end 
 end 
