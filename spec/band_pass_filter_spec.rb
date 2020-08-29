@@ -20,4 +20,8 @@ describe ('#filter') do
     it 'Raises an error if soundwave file is corrupt' do 
         expect { filter(["Test"], 50, 2000) }.to raise_error 'FILE IS CORRUPT'
     end 
+
+    it 'Raises an error if no frequency is provided' do 
+        expect { filter([], 50, 2000) }.to raise_error 'SOUNDWAVE FILE IS EMPTY'
+    end 
 end 
