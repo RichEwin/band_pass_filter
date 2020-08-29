@@ -1,4 +1,6 @@
 def filter(soundwave, low_freq=100, high_freq=300)
+
+    raise 'SOUNDWAVE FILE IS EMPTY' if soundwave.empty? 
     
     soundwave.map do | frequency |
 
