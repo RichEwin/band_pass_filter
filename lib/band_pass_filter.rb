@@ -1,12 +1,14 @@
 def filter(soundwave, low_freq, high_freq)
-    filter_input = []
+    
+    soundwave.map do | frequency |
 
-    if soundwave.first < low_freq
-        filter_input << low_freq
+    if frequency < low_freq
+        low_freq
     elsif 
-        soundwave.first > high_freq
-        filter_input << high_freq
+        frequency > high_freq
+        high_freq
     else 
-        filter_input << soundwave.first
+        frequency
     end 
+end 
 end 
